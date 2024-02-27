@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="left">left</div>
+  <div class="left">left111</div>
 </template>
 <style scoped>
 .left {
