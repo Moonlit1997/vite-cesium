@@ -1,8 +1,14 @@
-<script setup></script>
-
 <template>
-  <div class="left">left111</div>
+  <div class="left">
+    left111
+    <button @click="flytoHome">flyto</button>
+  </div>
 </template>
+<script setup>
+const flytoHome = () => {
+  console.log('flytoHome');
+};
+</script>
 <style scoped>
 .left {
   width: 200px;
