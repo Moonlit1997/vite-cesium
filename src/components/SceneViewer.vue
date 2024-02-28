@@ -10,6 +10,8 @@ import 'cesium/Build/Cesium/Widgets/widgets.css';
 import * as Cesium from 'cesium/Build/Cesium';
 
 onMounted(() => {
+  // 设置cesium的token
+  Cesium.Ion.defaultAccessToken = window.defaultAccessToken;
   // eslint-disable-next-line no-unused-vars
   const viewer = new Cesium.Viewer('sceneViewer', {
     animation: true, // 动画小组件
