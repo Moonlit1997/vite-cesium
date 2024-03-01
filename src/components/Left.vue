@@ -2,11 +2,15 @@
   <div class="left">
     left111
     <button @click="flytoHome">flyto</button>
+    <button @click="flyto">2333</button>
   </div>
 </template>
 <script setup>
 const flytoHome = () => {
   console.log('flytoHome');
+};
+const flyto = () => {
+  console.log('flyto');
 };
 </script>
 <style scoped>
