@@ -7,6 +7,7 @@
       <button @click="sethomeCamera">sethomeCamera</button>
       <button @click="setEntity">setEntity</button>
       <button @click="settwoPoint">settwoPoint</button>
+      <button @click="clear">clear</button>
     </div>
     <Right />
   </div>
@@ -77,6 +78,9 @@ const settwoPoint = () => {
     },
   });
   viewer.zoomTo(viewer.entities);
+};
+const clear = () => {
+  viewer.entities.removeAll();
 };
 </script>
 
