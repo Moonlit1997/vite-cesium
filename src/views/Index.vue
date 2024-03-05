@@ -5,6 +5,8 @@
     <div class="set">
       <button @click="setSun">setSun</button>
       <button @click="sethomeCamera">sethomeCamera</button>
+      <button @click="setEntity">setEntity</button>
+      <button @click="settwoPoint">settwoPoint</button>
     </div>
     <Right />
   </div>
@@ -23,10 +25,6 @@ import * as Cesium from 'cesium/Build/Cesium';
 const isMap = ref(true);
 let viewer = null;
 const ready = viewer2 => {
-  // eslint-disable-next-line no-console
-  console.log('ready');
-  // eslint-disable-next-line no-console
-  console.log(viewer2);
   viewer = viewer2;
 };
 const setSun = () => {
@@ -55,6 +53,30 @@ const sethomeCamera = () => {
   };
   // Set the initial view
   viewer.scene.camera.setView(homeCameraView);
+};
+const setEntity = () => {
+  viewer.entities.add({
+    name: 'BBox',
+    position: Cesium.Cartesian3.fromDegrees(120.55538, 31.87532, 100.0),
+    box: {
+      dimensions: new Cesium.Cartesian3(40.0, 100.0, 150.0),
+      material: Cesium.Color.BLUE,
+    },
+  });
+  viewer.zoomTo(viewer.entities);
+};
+const settwoPoint = () => {
+  viewer.entities.add({
+    name: 'Red line on the surface',
+    polyline: {
+      positions: Cesium.Cartesian3.fromDegreesArrayHeights([120.55538, 31.87532, 0, 120.55538, 31.87532, 1000]),
+      width: 5,
+      material: new Cesium.PolylineOutlineMaterialProperty({
+        color: Cesium.Color.RED,
+      }),
+    },
+  });
+  viewer.zoomTo(viewer.entities);
 };
 </script>
 
