@@ -6,12 +6,8 @@
   </div>
 </template>
 <script setup>
-const flytoHome = () => {
-  console.log('flytoHome');
-};
-const flyto = () => {
-  console.log('flyto');
-};
+const flytoHome = () => {};
+const flyto = () => {};
 </script>
 <style scoped>
 .left {
