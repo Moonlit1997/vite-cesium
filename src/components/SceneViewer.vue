@@ -7,7 +7,6 @@
 import { onMounted, defineEmits } from 'vue';
 
 // 引用cesium
-import 'cesium/Build/Cesium/Widgets/widgets.css';
 import * as Cesium from 'cesium/Build/Cesium';
 
 onMounted(() => {
@@ -33,6 +32,7 @@ const init = () => {
     // 如果最初应该看到导航说明，则为true；如果直到用户明确单击该按钮，则该提示不显示，否则为false。
     navigationInstructionsInitiallyVisible: false,
   });
+  window.earthViewer = viewer;
   emit('ready', viewer);
 };
 </script>
