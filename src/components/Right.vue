@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="right">right</div>
+  <div class="right">right <el-button type="primary">切换底图</el-button></div>
 </template>
 <style scoped>
 .right {

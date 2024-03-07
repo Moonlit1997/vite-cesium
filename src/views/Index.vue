@@ -10,6 +10,7 @@
       <button @click="setbillboard">setbillboard</button>
       <button @click="setView">setView</button>
       <button @click="setmingyuan">setmingyuan</button>
+      <button @click="setlayer">setlayer</button>
       <button @click="clear">clear</button>
     </div>
     <Right />
@@ -118,6 +119,7 @@ const setmingyuan = () => {
   });
   viewer.zoomTo(viewer.entities);
 };
+const setlayer = () => {};
 const clear = () => {
   viewer.entities.removeAll();
 };
